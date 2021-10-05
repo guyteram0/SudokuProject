@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Easy level</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <!-- more buttons to load game -->
+    <div class="container">
+        <div class="levelButtons">
+            <h1 id="levelHeader">Easy</h1>
+        </div>
+        <div class="levelButtons">
+            <button onClick="loadGame('easy')" type="button" class="btns">load game</button>
+        </div>
+        <div class="levelButtons">
+            <p id="levelResult"></p>
+        </div>
+        <div class="sodukoBoard">
+            <!-- suduku table -->
+            <table id="board">
+                <tr class="thickRow">
+                    <td class="regularCol"><input type="text" id="cell1" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell2" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell3" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell4" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell5" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell6" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell7" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell8" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell9" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                </tr>
+                <tr class="regularRow">
+                    <td class="regularCol"><input type="text" id="cell10" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell11" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell12" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell13" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell14" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell15" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell16" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell17" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell18" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                </tr>
+                <tr class="regularRow">
+                    <td class="regularCol"><input type="text" id="cell19" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell20" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell21" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell22" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell23" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell24" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell25" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell26" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell27" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                </tr>
+                <tr class="thickRow">
+                    <td class="regularCol"><input type="text" id="cell28" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell29" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell30" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell31" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell32" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell33" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell34" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell35" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell36" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                <tr class="regularRow">
+                    <td class="regularCol"><input type="text" id="cell37" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell38" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell39" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell40" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell41" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell42" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell43" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell44" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell45" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                </tr>
+                <tr class="regularRow">
+                    <td class="regularCol"><input type="text" id="cell46" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell47" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell48" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell49" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell50" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell51" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell52" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell53" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell54" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                </tr>
+                <tr class="thickRow">
+                    <td class="regularCol"><input type="text" id="cell55" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell56" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell57" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell58" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell59" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell60" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell61" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell62" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell63" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                </tr>
+                <tr class="regularRow">
+                    <td class="regularCol"><input type="text" id="cell64" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell65" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell66" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell67" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell68" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell69" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell70" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell71" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell72" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                </tr>
+                <tr class="regularRow">
+                    <td class="regularCol"><input type="text" id="cell73" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell74" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell75" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell76" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell77" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="thickCol"><input type="text" id="cell78" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell79" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell80" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                    <td class="regularCol"><input type="text" id="cell81" class="cell" maxlength="1" onkeyup="numberOnly()"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- button for again and result -->
+        <div class="levelButtons">
+            <button onClick="printResult()" type="button" class="btns">Finish</button>
+            <button onClick="again()" type="button" class="btns">Again</button>
+        </div>
+        <div class="levelButtons">
+            <!-- Remove onClick from Back btn -->
+            <a href="SodukoDifIndex.html"><button type="button" class="btns" id="backBtn">Return to Level</button></a>
+        </div>
+    </div>
+    <script src='script.js'></script>
+</body>
+</html>
